@@ -1,0 +1,79 @@
+.menu {
+  background: #fb5;
+  grid-column: 3 / -1;
+  padding: 10px;
+  margin: 2rem 0px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 10px;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+  font-size: 0.825em;
+  font-weight: bold;
+  font-family: "IBM Plex Mono";
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 700px) {
+  [data-menu="button"] {
+    font-family: "IBM Plex Mono", monospace;
+    background: #000;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 300;
+  }
+
+  [data-menu="button"]::before {
+    display: inline-block;
+    content: "";
+    height: 2px;
+    width: 12px;
+    background: #fff;
+    box-shadow: 0px 4px #fff, 0px -4px #fff;
+    margin-right: 10px;
+    transition: transform 0.3s;
+  }
+
+  [data-menu="button"].active::before {
+    transform: rotate(90deg);
+  }
+
+  .menu {
+    margin-top: 0px;
+  }
+
+  .menu [data-menu="lista"] {
+    display: none;
+    position: absolute;
+    background: #fb5;
+    z-index: 200;
+    padding: 60px 0px 5px 0px;
+    width: 200px;
+    top: 0;
+    left: 0;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .menu [data-menu="lista"].active {
+    display: block;
+    animation: show-down 0.3s forwards;
+  }
+
+  .menu .dropdown-menu {
+    position: static;
+    border: none;
+    padding: 15px 0px;
+  }
+}

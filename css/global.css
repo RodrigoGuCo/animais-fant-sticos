@@ -1,0 +1,91 @@
+/* Reset CSS */
+
+/* Margin and Padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Lists */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Imagens */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+  background: #faf6ed;
+}
+
+[data-anime="scroll"] {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+}
+
+[data-anime="scroll"].ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 700px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  body .menu,
+  body .animais,
+  body .faq,
+  body .contato,
+  body .copy {
+    grid-column: 1;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  body .copy {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-section.animais,
+  .grid-section.faq,
+  .grid-section.contato {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .grid-section .animais-lista {
+    grid-column: 1;
+  }
+
+  .grid-section.faq dl,
+  .grid-section.contato .mapa,
+  .grid-section.contato .dados {
+    grid-column: 1 / -1;
+  }
+
+  .grid-section.faq dl {
+    font-size: 1rem;
+  }
+
+  .grid-section h1 {
+    font-size: 3rem;
+  }
+
+  .animais-descricao section {
+    max-width: 310px;
+  }
+}

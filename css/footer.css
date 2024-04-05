@@ -1,0 +1,15 @@
+.copy {
+  display: grid;
+  grid-template-columns: 90px 300px 1fr;
+  grid-column: 3 / -1;
+  gap: 20px;
+  background: #fb5;
+  margin-bottom: 2rem;
+}
+
+.copy p {
+  font-family: 'IBM Plex Mono';
+  padding: 20px;
+  grid-column: 1 / -1;
+  font-weight: bold;
+}
