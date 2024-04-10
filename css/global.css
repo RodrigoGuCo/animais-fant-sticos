@@ -51,7 +51,8 @@ img {
   body .animais,
   body .faq,
   body .contato,
-  body .copy {
+  body .copy,
+  body .numeros {
     grid-column: 1;
     padding: 10px;
     gap: 10px;

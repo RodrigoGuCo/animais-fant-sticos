@@ -6,6 +6,8 @@ import trocarDescricao from "./trocardescricao.js";
 import initToolTip from "./tooltip.js";
 import initDropDown from "./dropdown.js";
 import activeBurgButton from "./menubutton.js";
+import initAnimaNumeros from "./anima-numeros.js";
+import initFuncionamento from "./funcionamento.js";
 
 animacaoScroll();
 ativarFaq();
@@ -15,3 +17,5 @@ mostrarModal();
 initToolTip();
 initDropDown();
 activeBurgButton();
+initAnimaNumeros();
+initFuncionamento();
